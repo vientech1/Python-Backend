@@ -18,6 +18,10 @@ app = Flask(__name__)
 
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def hello():
+    return "<h1> App Working Fine</h1>"
+
 @app.route('/api/result', methods=['POST'])
 def process_image():
     try:
